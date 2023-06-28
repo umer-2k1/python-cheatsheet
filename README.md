@@ -2,7 +2,6 @@
 
 ## Data Types in Python
 
-
  **Checking Dat types in python:**
   ```py
  print(type(10))                  # Int
@@ -48,20 +47,11 @@ my_float = float(my_string)
 print(my_float)  # Output: 3.14
    ```
 
- **float() - Converts a value to a floating-point number:**
-  ```py
-my_string = "3.14"
-my_float = float(my_string)
-print(my_float)  # Output: 3.14
-   ```
-
-
 **str() - Converts a value to a string:**
   ```py
 my_number = 42
 my_string = str(my_number)
 print(my_string)  # Output: "42"
-
    ```
 
 
@@ -71,16 +61,12 @@ print(my_string)  # Output: "42"
 my_string = "Hello"
 my_list = list(my_string)
 print(my_list)  # Output: ['H', 'e', 'l', 'l', 'o']
-
    ```
-
-
 
 **dict() - Creates a dictionary:**
   ```py
 my_dict = dict(firstName="Muhammad", lastName="Umer")
 print(my_dict)  # Output: {'firstName': 'Muhammad', 'lastName': 'Umer'}
-
    ```
 
 
@@ -131,4 +117,53 @@ file.close()
   ```py
 my_list = [1, 2, 3]
 print(dir(my_list))  # Output: ['append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+   ```
+
+## Comparison operator in Python
+
+
+ **is - Returns True if both variables are the same object:**
+  ```py
+x = [1,2,3]
+y = [1,2,3]
+z = x
+print(x is y)
+print('1 is 1: ', 1 is 1)
+   ```
+
+
+ **is not - Returns True if both variables are not the same object:**
+  ```py
+x = [1, 2, 3]
+y = [1, 2, 3]
+z = x
+
+print(x is not y)  # Output: True (x and y are different objects)
+print(x is not z)  # Output: False (x and z refer to the same object)
+
+print('1 is not 2: ', 1 is not 2)
+   ```
+
+
+ **in - Returns True if the queried list contains a certain item:**
+  ```py
+my_list = [1, 2, 3, 4, 5]
+
+print(3 in my_list)  # Output: True (3 is present in my_list)
+print(6 in my_list)  # Output: False (6 is not present in my_list)
+
+print('U in Umer', 'A' in 'Umer') # True - A found in the string
+print('E in Umer', 'B' in 'Umer') # False - there is no uppercase B
+   ```
+
+ **not in - Returns True if the queried list doesn't have a certain item:**
+  ```py
+my_list = [1, 2, 3, 4, 5]
+
+print(3 not in my_list)  # Output: False (3 is present in my_list)
+print(6 not in my_list)  # Output: True (6 is not present in my_list)
+
+
+print('U in Umer', 'A' in 'Umer') # True - A found in the string
+print('E in Umer', 'B' in 'Umer') # False - there is no uppercase B
    ```
