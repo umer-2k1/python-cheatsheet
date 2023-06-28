@@ -119,51 +119,18 @@ my_list = [1, 2, 3]
 print(dir(my_list))  # Output: ['append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
    ```
 
-## Comparison operator in Python
+## Print Format in Python
 
-
- **is - Returns True if both variables are the same object:**
+ **formatted string literals,:**
   ```py
-x = [1,2,3]
-y = [1,2,3]
-z = x
-print(x is y)
-print('1 is 1: ', 1 is 1)
+a = 3, b= 5
+print(f"{a} + {b} is {a+b}")
    ```
 
 
- **is not - Returns True if both variables are not the same object:**
+ **New Style String Formatting (str.format):**
   ```py
-x = [1, 2, 3]
-y = [1, 2, 3]
-z = x
-
-print(x is not y)  # Output: True (x and y are different objects)
-print(x is not z)  # Output: False (x and z refer to the same object)
-
-print('1 is not 2: ', 1 is not 2)
-   ```
-
-
- **in - Returns True if the queried list contains a certain item:**
-  ```py
-my_list = [1, 2, 3, 4, 5]
-
-print(3 in my_list)  # Output: True (3 is present in my_list)
-print(6 in my_list)  # Output: False (6 is not present in my_list)
-
-print('U in Umer', 'A' in 'Umer') # True - A found in the string
-print('E in Umer', 'B' in 'Umer') # False - there is no uppercase B
-   ```
-
- **not in - Returns True if the queried list doesn't have a certain item:**
-  ```py
-my_list = [1, 2, 3, 4, 5]
-
-print(3 not in my_list)  # Output: False (3 is present in my_list)
-print(6 not in my_list)  # Output: True (6 is not present in my_list)
-
-
-print('U in Umer', 'A' in 'Umer') # True - A found in the string
-print('E in Umer', 'B' in 'Umer') # False - there is no uppercase B
+a = 3
+b= 5
+print("The sum of {} + {} is {}".format(a,b,a+b))
    ```
