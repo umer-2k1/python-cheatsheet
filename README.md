@@ -121,7 +121,7 @@ print(dir(my_list))  # Output: ['append', 'clear', 'copy', 'count', 'extend', 'i
 
 ## Print Format in Python
 
- **formatted string literals,:**
+ **String Interpolation / f-Strings or string literals:**
   ```py
 a = 3, b= 5
 print(f"{a} + {b} is {a+b}")
@@ -133,4 +133,5 @@ print(f"{a} + {b} is {a+b}")
 a = 3
 b= 5
 print("The sum of {} + {} is {}".format(a,b,a+b))
+print('{} / {} = {:.2f}'.format(a, b, a / b)) # limits it to two digits 
    ```
