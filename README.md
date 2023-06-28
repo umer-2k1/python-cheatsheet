@@ -254,3 +254,76 @@ print(resversed_string)
    ```
 
 
+ **isalnum() method is a built-in string method in Python that checks whether all the characters in a string are alphanumeric (consists of letters and numbers):**
+  ```py
+string1 = "Hello123"
+string2 = "Hello, World!"
+
+print(string1.isalnum())  # Output: True (all characters are alphanumeric)
+print(string2.isalnum())  # Output: False (comma and space are non-alphanumeric characters)
+   ```
+
+
+ **isalpha() Checks if all string elements are alphabet characters (a-z and A-Z):**
+  ```py
+string1 = "Hello"
+string2 = "123"
+
+print(string1.isalpha())  
+print(string2.isalpha()) 
+   ```
+
+
+ **isidentifier(): Checks for a valid identifier - it checks if a string is a valid variable name:**
+  ```py
+string1 = "Hello"
+string2 = "123Hello"
+
+print(string1.isidentifier())   # True
+print(string2.isidentifier())   # False bcz it starts with 123
+   ```
+
+ **islower(): Checks if all alphabet characters in the string are lowercase:**
+  ```py
+string1 = "hello"
+string2 = "Hello"
+
+print(string1.islower())   # True
+print(string2.islower())   # False
+   ```
+
+ **isupper(): Checks if all alphabet characters in the string are uppercase:**
+  ```py
+string1 = "hello"
+string2 = "HELLO"
+
+print(string1.isupper())   # False
+print(string2.isupper())   # True
+   ```
+
+ **join(): Returns a concatenated string:**
+  ```py
+web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
+result = ' '.join(web_tech)
+print(result) # 'HTML CSS JavaScript React'
+   ```
+
+
+ **Different string method:**
+  ```py
+
+  # count(): returns occurrences of substring in string
+my_string = "Hello, World"
+print(my_string.count('o'))
+
+# endswith(): Checks if a string ends with a specified ending
+print(my_string.endswith('ld')) # true
+print(my_string.endswith('od')) # false
+
+# find(): Returns the index of the first occurrence of a substring, if not found returns -1
+challenge = 'thirty days of python'
+print(challenge.find('y'))  # 5
+print(challenge.find('th')) # 0
+
+   ```
+
