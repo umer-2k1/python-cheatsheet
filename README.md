@@ -506,9 +506,78 @@ print(fruits_copy)       # ['banana', 'orange', 'mango', 'lemon']
 
  **Joining Lists:**
  *There are several ways to join, or concatenate, two or more lists in Python.*
+
   ```py
-language =  'Python'
-print(language[0])
-print(language[1])
+# Plus Operator (+)
+fruits = ['banana', 'orange', 'mango', 'lemon']
+vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+fruits_and_vegetables = fruits + vegetables
+print(fruits_and_vegetables ) # ['banana', 'orange', 'mango', 'lemon', 'Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+
+# extend() method
+num1 = [0, 1, 2, 3]
+num2= [4, 5, 6]
+num1.extend(num2)
+print(num1)
    ```
 
+ **Sorting List Items:**
+  ```py
+  # syntax
+lst = ['item1', 'item2']
+lst.sort()                # ascending
+lst.sort(reverse=True)    # descending
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.sort()
+print(fruits)             # sorted in alphabetical order, ['banana', 'lemon', 'mango', 'orange']
+
+
+num = [2,1,5,3,9,7,10,6,4,8]
+num.sort()
+print(num) #ascending order
+
+
+num = [2,1,5,3,9,7,10,6,4,8]
+num.sort(reverse=True)
+print(num) #descending order
+
+
+   ```
+
+
+ **sorted(): returns the ordered list without modifying the original list:**
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(sorted(fruits))   # ['banana', 'lemon', 'mango', 'orange']
+  # Reverse order
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits = sorted(fruits,reverse=True)
+print(fruits)     # ['orange', 'mango', 'lemon', 'banana']
+   ```
+
+
+ **Counting Items in a List:**
+ *The count() method returns the number of times an item appears in a list*
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(fruits.count('orange'))   # 1
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+print(ages.count(24))           # 3
+   ```
+
+
+ **Copying a List:**
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits_copy = fruits.copy()
+print(fruits_copy)       # ['banana', 'orange', 'mango', 'lemon']
+   ```
+
+
+ **Copying a List:**
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits_copy = fruits.copy()
+print(fruits_copy)       # ['banana', 'orange', 'mango', 'lemon']
+   ```
