@@ -339,7 +339,176 @@ print(web_tech.split())
 web_tech = 'HTML CSS JS REACTJS NEXJS NODEJS'
 print(web_tech.startswith('HTML'))  #True
 print(web_tech.startswith('CSS'))  #False
+   ```
 
 
+
+### Lists in Python
+
+ **Accessing List Items Using Positive Indexing:**
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+first_fruit = fruits[0] # we are accessing the first item using its index
+print(first_fruit)      # banana
+second_fruit = fruits[1]
+print(second_fruit)     # orange
+
+# Last index
+last_index = len(fruits) - 1
+last_fruit = fruits[last_index]
+   ```
+
+ **Accessing List Items Using Positive Indexing:**
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+first_fruit = fruits[0] # we are accessing the first item using its index
+print(first_fruit)      # banana
+second_fruit = fruits[1]
+print(second_fruit)     # orange
+
+# Last index
+last_index = len(fruits) - 1
+last_fruit = fruits[last_index]
+   ```
+
+
+
+ **Accessing List Items Using Negative Indexing:**
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+first_fruit = fruits[-4]
+last_fruit = fruits[-1]
+second_last = fruits[-2]
+print(first_fruit)      # banana
+print(last_fruit)       # lemon
+print(second_last)      # mango
+   ```
+
+
+
+ **Unpacking List Items:**
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon', 'peach', 'watermelon','apple']
+first_item, second_item, *rest = fruits
+print(first_item)
+print(second_item)
+print(rest)
+   ```
+
+
+
+ **Slicing Items from a List:**
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon', 'peach', 'watermelon']
+print(fruits[0:]) # copy list
+print(fruits[0:4])
+print(fruits[:2])  # ['banana', 'orange']
+print(fruits[1:])  # ['orange', 'mango', 'lemon', 'peach', 'watermelon']
+print(fruits[::2]) #every 2nd element from list
+print(fruits[::3]) #every 3rd element from list
+
+
+# negative indexing
+fruits = ['banana', 'orange', 'mango', 'lemon']
+all_fruits = fruits[-4:] # it returns all the fruits
+orange_and_mango = fruits[-3:-1] # it does not include the last index,['orange', 'mango']
+orange_mango_lemon = fruits[-3:] # this will give starting from -3 to the end,['orange', 'mango', 'lemon']
+reverse_fruits = fruits[::-1] # a negative step will take the list in reverse order,['lemon', 'mango', 'orange', 'banana']
+   ```
+
+ **Modifying Lists:**
+ *List is a mutable or modifiable ordered collection of items. Lets modify the fruit list.*
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits[0] = 'avocado'
+print(fruits)       #  ['avocado', 'orange', 'mango', 'lemon']
+fruits[1] = 'apple'
+print(fruits)       #  ['avocado', 'apple', 'mango', 'lemon']
+last_index = len(fruits) - 1
+fruits[last_index] = 'lime'
+print(fruits)        #  ['avocado', 'apple', 'mango', 'lime']
+   ```
+
+ **Checking Items in a List:**
+ *Checking an item if it is a member of a list using *in* operator.*
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+does_exist_01 = 'banana' in fruits 
+print(does_exist_01) # True
+does_exist_02 = 'mango' in fruits 
+print(does_exist_02)  # True
+does_not_exits = 'apple' in fruits
+print(does_not_exits)  # False
+   ```
+
+
+ **Adding Items to a List:**
+  ```py
+
+ # using append 
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.append('apple')
+print(fruits)           # ['banana', 'orange', 'mango', 'lemon', 'apple']
+   
+
+  # The insert() fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.insert(2, 'apple') # insert apple between orange and mango
+print(fruits)           # ['banana', 'orange', 'apple', 'mango', 'lemon']
+fruits.insert(3, 'lime')   # ['banana', 'orange', 'apple', 'lime', 'mango', 'lemon']
+print(fruits)methods takes two arguments:index and an item to insert.
+   ```
+
+
+ **Removing Items from a List:**
+  ```py
+  
+  # using remove() method
+fruits = ['banana', 'orange', 'mango', 'lemon', 'banana']
+fruits.remove('banana')
+print(fruits)  # ['orange', 'mango', 'lemon', 'banana'] - this method removes the first occurrence of the item in the list
+fruits.remove('lemon')
+print(fruits)  # ['orange', 'mango', 'banana']
+
+# using pop() method
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.pop()
+print(fruits)       # ['banana', 'orange', 'mango']
+fruits.pop(0)
+print(fruits)       # ['orange', 'mango']
+
+
+# using del keyword, it removes the specified index.
+fruits = ['banana', 'orange', 'mango', 'lemon', 'kiwi', 'lime']
+del fruits[0]
+print(fruits)       # ['orange', 'mango', 'lemon', 'kiwi', 'lime']
+del fruits[1]
+print(fruits)       # ['orange', 'lemon', 'kiwi', 'lime']
+
+web_tech = ['HTML', 'CSS', 'JS', 'NextJS', 'ReactJS', 'Nodejs']
+del web_tech[1:4] # ['HTML', 'ReactJS', 'Nodejs']
+# del web_tech[:-1] # return last item
+# del web_tech[-1:] #remove last item
+print(web_tech)
+
+# clear() remove all elements
+web_tech.clear()
+print(web_tech)
+   ```
+
+
+ **Copying a List:**
+  ```py
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits_copy = fruits.copy()
+print(fruits_copy)       # ['banana', 'orange', 'mango', 'lemon']
+   ```
+
+
+ **Joining Lists:**
+ *There are several ways to join, or concatenate, two or more lists in Python.*
+  ```py
+language =  'Python'
+print(language[0])
+print(language[1])
    ```
 
