@@ -312,6 +312,11 @@ print(result) # 'HTML CSS JavaScript React'
  **Different string method:**
   ```py
 
+  # replace(): Replaces substring with a given string
+  string1 = 'I love mang'
+  replaced_string = string1.replace('man','mangoes')
+  print(replaced_string)
+
   # count(): returns occurrences of substring in string
 my_string = "Hello, World"
 print(my_string.count('o'))
@@ -324,6 +329,17 @@ print(my_string.endswith('od')) # false
 challenge = 'thirty days of python'
 print(challenge.find('y'))  # 5
 print(challenge.find('th')) # 0
+
+
+# split(): Splits the string, using given string or space as a separator
+web_tech = 'HTML CSS JS REACTJS NEXJS NODEJS'
+print(web_tech.split())
+
+# startswith(): Checks if String Starts with the Specified String
+web_tech = 'HTML CSS JS REACTJS NEXJS NODEJS'
+print(web_tech.startswith('HTML'))  #True
+print(web_tech.startswith('CSS'))  #False
+
 
    ```
 
